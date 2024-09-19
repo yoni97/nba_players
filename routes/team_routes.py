@@ -28,7 +28,6 @@ def create_team():
     new_team = Team(name_team=name_team, ids_player=ids_player)
     db.session.add(new_team)
     db.session.commit()
-
     return jsonify({"message": "Team created successfully!",
                     "team": {"id": new_team.id, "name_team": new_team.name_team,
                              "id_of_player": new_team.id_of_player}}), 201
