@@ -37,6 +37,8 @@ class Player(db.Model):
     team = db.Column(db.String)
     season =db.Column(db.Integer)
     playerId = db.Column(db.String)
+    ATR = db.Column(db.Float)
+    PPG = db.Column(db.Float, default=0)
 
     def to_dict(self):
         return {
@@ -72,4 +74,6 @@ class Player(db.Model):
             'team': self.team,
             'season': self.season,
             'playerId': self.playerId,
+            'ATR': self.ATR,
+            'PPG': self.PPG,
         }
