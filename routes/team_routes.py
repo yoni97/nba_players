@@ -18,7 +18,7 @@ def create_team():
     if not isinstance(ids_player, list) or len(ids_player) < 5:
         return jsonify({"error": "You must provide at least 5 player IDs!"}), 400
     positions = {'PG': 0, 'SG': 0, 'SF': 0, 'PF': 0, 'C': 0}
-    players = Player.query.filter(Player.id.in_(ids_player)and Player.team).all()
+    players = Player.query.filter(Player.id.in_(ids_player) and Player.team.in_(name_team)).all()
     if len(players) < 5:
         return jsonify({"error": "Not all player IDs are valid!"}), 400
     for player in players:
