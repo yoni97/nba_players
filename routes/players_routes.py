@@ -1,5 +1,4 @@
 from flask import Blueprint, jsonify, request
-from services.algorithms import get_players_from_db
 
 players_bp = Blueprint('users', __name__)
 
