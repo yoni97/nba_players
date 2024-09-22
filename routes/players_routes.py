@@ -1,3 +1,5 @@
+from sys import prefix
+
 from flask import Blueprint, jsonify, request
 
 players_bp = Blueprint('users', __name__)
@@ -6,7 +8,7 @@ players_bp = Blueprint('users', __name__)
 def hello_world():
     return 'Welcome to the NBA league!'
 
-@players_bp.route('/players', methods=['GET'])
+@players_bp.route('/api/players', methods=['GET'])
 def players():
     from services.algorithms import get_players_from_db
     position = request.args.get('position')

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DdlMappings">
+    <mapping uuid="d6294da6-daf2-4518-93ff-68acf68e7823" name="players Mapping">
+      <data-sources db="a7e71bee-8037-46b3-adec-db12a62a1948" ddl="cd902b22-8c5a-4a88-aff9-7aa3583bd0a7" />
+    </mapping>
+  </component>
+</project>
